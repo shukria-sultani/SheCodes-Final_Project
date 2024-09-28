@@ -1,5 +1,93 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     font-family: "Playwrite DE Grund", serif;
+}
+
+body {
+    background-image: 
+    url("https://i.pinimg.com/originals/a9/37/d4/a937d47b0d3d47df7a4faf34f3ee61f3.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-color: rgb(11, 11, 24);
+    min-height: 100vh;
+}
+.search {
+    display: flex;
+    flex-direction: column; 
+    width: 60%;
+    background-color: rgba(47, 61, 118, 0.5);
+    color: #fff;
+    margin: 2% 20%;
+}
+
+.search h1 {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.search form {
+    padding-top: 10px;
+    padding-left: 30%;
+    padding-bottom: 20px;
+}
+.search form input {
+     width: 70%;
+     text-align: center;
+     margin: -40px;
+     border: none;
+     outline: none;
+     background-color: transparent;
+     border: 2px solid orangered;
+     border-right: none;
+     padding: 5px;
+     color: #fff;
+}
+.search form button{
+     background-color: transparent;
+     border: 2px solid orangered;
+     border-left: none;
+     color: #fff;
+     padding: 5px;
+     cursor: pointer;
+}
+@media screen and (max-width: 600px) { 
+    .search {
+        width: 100%;
+        margin: 0;
+    }
+    .search form input{
+       width: 80%;
+    } 
+}
+.currentTemp{
+    display: flex;
+    width: 60%;
+    background-color: rgba(47, 61, 118, 0.5);
+    color: #fff;
+    margin: -30px 20%;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.currentTemp h1{  
+    font-size: 25px;
+    margin-top: 20px;
+}
+.weatherIcon{
+    font-size: 40px;
+}
+.currentTemp h2{
+    padding: 0;
+    margin-top: -20px;
+    font-size: 20px;
+}
+.currentTemp .humidity{
+     margin-top: -30px;
+}
+.currentTemp .wind{
+    margin-top: -60px;
 }
