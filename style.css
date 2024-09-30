@@ -7,18 +7,17 @@
 
 body {
     background-image: 
-    url("https://i.pinimg.com/originals/a9/37/d4/a937d47b0d3d47df7a4faf34f3ee61f3.gif");
+    url("https://i.pinimg.com/originals/04/6f/51/046f5145ae962d44679c45198909043a.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    background-color: rgb(11, 11, 24);
     min-height: 100vh;
 }
 .search {
     display: flex;
     flex-direction: column; 
     width: 60%;
-    background-color: rgba(47, 61, 118, 0.5);
+    background-color: rgba(60, 156, 212, 0.7);
     color: #fff;
     margin: 2% 20%;
 }
@@ -41,14 +40,17 @@ body {
      border: none;
      outline: none;
      background-color: transparent;
-     border: 2px solid orangered;
+     border: 2px solid #fff;
      border-right: none;
      padding: 5px;
      color: #fff;
 }
+.search form input::placeholder{
+      color: black;
+}
 .search form button{
      background-color: transparent;
-     border: 2px solid orangered;
+     border: 2px solid #fff;
      border-left: none;
      color: #fff;
      padding: 5px;
@@ -66,7 +68,7 @@ body {
 .currentTemp{
     display: flex;
     width: 60%;
-    background-color: rgba(47, 61, 118, 0.5);
+    background-color: rgba(60, 156, 212, 0.7);
     color: #fff;
     margin: -30px 20%;
     flex-direction: row;
@@ -97,6 +99,9 @@ body {
         flex-direction: column;
         text-align: center;
         justify-content: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
     .temprature-details{
        padding: 20px 20px;
@@ -106,17 +111,27 @@ body {
         padding: 20px 20px;
     }
 }
-/* .currentTemp h1{  
-    font-size: 25px;
+.forcast{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 100px;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
 }
-
-.currentTemp h2{
-    padding: 0;
-    font-size: 20px;
+.forcast >div{
+    background-color: rgba(60, 156, 212, 0.7);
+    padding: 20px 20px ;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
 }
-.humidity{
-     margin-top: 10px;
+@media screen  and (max-width: 600px){
+      .forcast{
+        padding: 10px;
+        margin-top: 20px;
+        gap: 20px;
+        justify-content: center;
+      }
 }
-.wind{
-    margin-top: 10px;
-} */
