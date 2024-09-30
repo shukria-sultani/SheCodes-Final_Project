@@ -121,7 +121,7 @@ body {
     justify-content: center;
 }
 .forcast >div{
-    background-color: rgba(60, 156, 212, 0.7);
+    background-color: rgba(60, 156, 212, 0.5);
     padding: 20px 20px ;
     text-align: center;
     border-radius: 10px;
