@@ -69,25 +69,48 @@ body {
     background-color: rgba(47, 61, 118, 0.5);
     color: #fff;
     margin: -30px 20%;
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
     padding-bottom: 20px;
+    padding-top: 20px;
 }
-.currentTemp h1{  
+.temprature-details{
+    padding: 20px 150px;
+}
+.temprature-details h1, h2s{
     font-size: 25px;
-    margin-top: 20px;
 }
-.weatherIcon{
-    font-size: 40px;
+.more-details{
+     display: inline;
+     padding: 30px 50px;
 }
+.more-details span{
+    display: block;
+}
+@media screen  and (max-width:600px){
+    .currentTemp{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .temprature-details{
+       padding: 20px 20px;
+
+    }
+    .more-details{
+        padding: 20px 20px;
+    }
+}
+/* .currentTemp h1{  
+    font-size: 25px;
+}
+
 .currentTemp h2{
     padding: 0;
-    margin-top: -20px;
     font-size: 20px;
 }
-.currentTemp .humidity{
-     margin-top: -30px;
+.humidity{
+     margin-top: 10px;
 }
-.currentTemp .wind{
-    margin-top: -60px;
-}
+.wind{
+    margin-top: 10px;
+} */
