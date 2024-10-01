@@ -14,6 +14,23 @@ function refreshWeather(response) {
   temperatureElement.innerHTML = `Current: ${Math.round(temperature)}&deg;C`; 
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`; 
   getForecast(response.data.city); 
+  showCurrentTime();
+  
+}
+
+const showCurrentTime = ()=>{
+    let currentTime = document.querySelector('.currentTime')
+       let currentDate = new Date();
+       let hour = currentDate.getHours();
+       let minute = currentDate.getMinutes();
+       let second = currentDate.getSeconds();
+       let period = hour >= 12 ? 'PM' : 'AM';
+       // Convert to 12-hour format
+       hour = hour % 12 || 12; // Converts 0 to 12
+       // Pad minutes and seconds with leading zeros
+       minute = String(minute).padStart(2, '0');
+       second = String(second).padStart(2, '0');
+       currentTime.textContent = `${hour}:${minute}:${second} ${period}`;
 }
 
 function searchCity(city) {
@@ -74,10 +91,10 @@ function displayForecast(response) {
       <div class="weather-forecast-day">
           <div class="weather-forecast-date">${formatDay(dailyForecasts[index].time)}</div>
           <div class="weather-forecast-temperature">
-              <strong>High: ${Math.round(dailyForecasts[index].temperature.maximum)}º</strong>
+              <strong>High: ${Math.round(dailyForecasts[index].temperature.maximum)}ºC</strong>
           </div>
           <div class="weather-forecast-temperature">
-              <strong>Low: ${Math.round(dailyForecasts[index].temperature.minimum)}º</strong>
+              <strong>Low: ${Math.round(dailyForecasts[index].temperature.minimum)}ºC</strong>
           </div>
           <img src="${dailyForecasts[index].condition.icon_url}" class="weatherIcon" />
       </div>`;
